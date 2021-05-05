@@ -1,0 +1,1 @@
+Ich habe das Ereignis ${content}, am <say-as interpret-as="date">${date}</say-as> um <say-as interpret-as="time">${time}</say-as> gelöscht.

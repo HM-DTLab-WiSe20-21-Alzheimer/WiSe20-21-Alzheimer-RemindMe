@@ -1,0 +1,709 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "remind me",
+            "modelConfiguration": {
+                "fallbackIntentSensitivity": {
+                    "level": "LOW"
+                }
+            },
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AddEntry",
+                    "slots": [
+                        {
+                            "name": "content",
+                            "type": "AMAZON.SearchQuery"
+                        },
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "time",
+                            "type": "AMAZON.TIME"
+                        },
+                        {
+                            "name": "thingsToBring",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "erinnere mich an {thingsToBring}",
+                                "ja ich will {thingsToBring}",
+                                "ja ich möchte {thingsToBring}",
+                                "erinnere mich daran {thingsToBring} mitzunehmen",
+                                "ja sollst du",
+                                "ja ich brauche die folgenden Dinge {thingsToBring}",
+                                "ja ich brauche {thingsToBring}",
+                                "ja ich will {thingsToBring} mitnehmen",
+                                "ja ich möchte {thingsToBring} mitnehmen",
+                                "ja möchte ich",
+                                "ja will ich",
+                                "nein jetzt nicht",
+                                "nein will ich nicht",
+                                "nein möchte ich nicht",
+                                "jetzt nicht",
+                                "nö",
+                                "ja {thingsToBring}",
+                                "ja gerne",
+                                "gerne",
+                                "nein danke",
+                                "ne",
+                                "nein",
+                                "ja sicher",
+                                "sicher",
+                                "ja"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Notiere das Ereignis {content}",
+                        "Notier dir das Ereignis {content}",
+                        "Merk dir das Ereignis {content}",
+                        "Trag dir das Ereignis {content} ein"
+                    ]
+                },
+                {
+                    "name": "ReadAllDayEntries",
+                    "slots": [],
+                    "samples": [
+                        "An was solltest du mich heute erinnern",
+                        "Was muss ich heute noch tun",
+                        "Was muss ich noch tun",
+                        "Welche Ereignisse habe ich mir eingetragen",
+                        "An was muss ich heute noch denken",
+                        "An was muss ich noch denken",
+                        "Was habe ich heute noch vor",
+                        "Was sind meine Ereignisse heute",
+                        "Welche Ereignisse stehen heute an",
+                        "Was habe ich mir für heute vorgenommen",
+                        "Was habe ich für heute eingetragen",
+                        "Was steht heut an",
+                        "Welche Ereignisse stehen heute noch an"
+                    ]
+                },
+                {
+                    "name": "ReadNextEntry",
+                    "slots": [],
+                    "samples": [
+                        "Was muss ich als nächstes tun",
+                        "Welches Ereignis steht als nächsten an",
+                        "Was ist mein nächstes Ereignis"
+                    ]
+                },
+                {
+                    "name": "ReadCurrentEntry",
+                    "slots": [],
+                    "samples": [
+                        "Was willst du mir sagen",
+                        "Woran willst du mich erinnern",
+                        "Remindme erinner mich"
+                    ]
+                },
+                {
+                    "name": "StartDailyReminder",
+                    "slots": [
+                        {
+                            "name": "time",
+                            "type": "AMAZON.TIME"
+                        }
+                    ],
+                    "samples": [
+                        "Start die tägliche Erinnerung",
+                        "Starte die tägliche Erinnerung",
+                        "Ich will eine tägliche Erinnerung",
+                        "Ich möchte eine tägliche Erinnerung",
+                        "Ich brauche eine tägliche Erinnerung",
+                        "Start die tägliche Erinnerung um {time}",
+                        "Starte die tägliche Erinnerung um {time}",
+                        "Ich will eine tägliche Erinnerung um {time}",
+                        "Ich möchte eine tägliche Erinnerung um {time}",
+                        "Ich brauche eine tägliche Erinnerung um {time}"
+                    ]
+                },
+                {
+                    "name": "StopDailyReminder",
+                    "slots": [],
+                    "samples": [
+                        "Stop die tägliche Erinnerung",
+                        "Stoppe die tägliche Erinnerung",
+                        "Beende die tägliche Erinnerung",
+                        "Ich will keine tägliche Erinnerung",
+                        "Ich möchte keine tägliche Erinnerung",
+                        "Ich brauche keine tägliche Erinnerung",
+                        "Ich will keine tägliche Erinnerung mehr",
+                        "Ich möchte keine tägliche Erinnerung mehr",
+                        "Ich brauche keine tägliche Erinnerung mehr"
+                    ]
+                },
+                {
+                    "name": "ReadAnyDayAllEntries",
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "Was ist am {date}",
+                        "Welche Ereignisse habe ich am {date}",
+                        "Welche Termine habe ich am {date}",
+                        "Welche Termine hatte ich am {date}",
+                        "Welche Ereignisse hatte ich am {date}",
+                        "Was war am {date}"
+                    ]
+                },
+                {
+                    "name": "DeleteEntry",
+                    "slots": [
+                        {
+                            "name": "content",
+                            "type": "AMAZON.SearchQuery"
+                        },
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "samples": [
+                                "Es ist am {date} um {time}",
+                                "Es ist am {date}"
+                            ]
+                        },
+                        {
+                            "name": "time",
+                            "type": "AMAZON.TIME",
+                            "samples": [
+                                "um {time}",
+                                "Es ist um {time}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Entferne das Ereignis {content}",
+                        "Lösche das Ereignis {content}",
+                        "Lösche die Erinnerung für {content}"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "AddEntry",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "content",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1262952752760.511360058399"
+                            }
+                        },
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1262952752760.781979288263"
+                            }
+                        },
+                        {
+                            "name": "time",
+                            "type": "AMAZON.TIME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1262952752760.76834343526"
+                            }
+                        },
+                        {
+                            "name": "thingsToBring",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.230923088049.422839174536"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isNotInSet",
+                                    "prompt": "Slot.Validation.230923088049.422839174536.566973555857",
+                                    "values": [
+                                        "gerne",
+                                        "ja sollst du",
+                                        "ja will ich",
+                                        "ja sicher",
+                                        "ja",
+                                        "ja möchte ich",
+                                        "sicher",
+                                        "ja gerne"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "StartDailyReminder",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "time",
+                            "type": "AMAZON.TIME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1541696492042.744036693249"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ReadAnyDayAllEntries",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.264191646452.1367086402750"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DeleteEntry",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "content",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.665755797437.746252704500"
+                            }
+                        },
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.665755797437.492325957784"
+                            }
+                        },
+                        {
+                            "name": "time",
+                            "type": "AMAZON.TIME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.665755797437.473255591428"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1262952752760.781979288263",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Wann ist das Ereignis {content} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "An welchem Tag ist das Ereignis {content} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "An welchem Datum ist das Ereignis {content} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Zu welchem Datum ist das Ereignis {content} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und wann ist das Ereignis {content} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und an welchem Tag ist das Ereignis {content} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und an welchem Datum ist das Ereignis {content} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und zu welchem Datum ist das Ereignis {content} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Wann ist das Ereignis?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "An welchem Tag ist das Ereignis?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "An welchem Datum ist das Ereignis?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Zu welchem Datum ist das Ereignis?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und wann ist das Ereignis?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und an welchem Tag ist das Ereignis?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und an welchem Datum ist das Ereignis?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und zu welchem Datum ist das Ereignis?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1262952752760.511360058399",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Und woran soll ich dich erinnern?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und woran soll ich dich am {date} erinnern?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und woran soll ich dich am  {date} um {time} erinnern?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und woran soll ich dich um {time} erinnern?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und welches Ereignis soll ich eintragen?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und welches Ereignis soll ich am {date}  eintragen?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und welches Ereignis soll ich am {date} um {time} eintragen?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und welches Ereignis soll ich um {time} eintragen?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Woran soll ich dich erinnern?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Woran soll ich dich am {date} erinnern?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Woran soll ich dich am  {date} um {time} erinnern?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Woran soll ich dich um {time} erinnern?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Welches Ereignis soll ich eintragen?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Welches Ereignis soll ich am {date}  eintragen?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Welches Ereignis soll ich am {date} um {time} eintragen?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Welches Ereignis soll ich um {time} eintragen?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1262952752760.76834343526",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Wann ist das Ereignis?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Wann ist das Ereignis {content} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Um wieviel Uhr am {date} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Um wieviel Uhr is des Ereignis {content} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Um wieviel Uhr is des Ereignis?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und wann ist der Ereignis?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und wann ist das Ereignis {content} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und um wieviel Uhr am {date} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und um wieviel Uhr is des Ereignis?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und um wieviel Uhr is des Ereignis {content} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1262952752760.76834343526",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Ist die Uhrzeit {time} richtig?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1262952752760.781979288263",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Stimmt das Datum {date} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1262952752760.511360058399",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "meh"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.230923088049.422839174536.566973555857",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Was möchtest du mitnehmen?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.230923088049.422839174536",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Willst du irgendetwas für dieses Ereignis vorbereiten?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Möchtest du irgendetwas für dieses Ereignis vorbereiten?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Soll ich dich daran erinnern etwas mitzunehmen?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Willst du etwas mitnehmen?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Möchtest du etwas mitnehmen?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und willst du irgendetwas für dieses Ereignis vorbereiten?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und möchtest du irgendetwas für dieses Ereignis vorbereiten?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und soll ich dich daran erinnern etwas mitzunehmen?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und willst du etwas mitnehmen?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und möchtest du etwas mitnehmen?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1541696492042.744036693249",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Um wieviel Uhr soll ich dich jeden Tag erinnern?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Um wieviel Uhr soll ich dich täglich erinnern?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Wann soll ich dich jeden Tag erinnern?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Wann soll ich dich täglich erinnern?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und um wieviel Uhr soll ich dich jeden Tag erinnern?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und um wieviel Uhr soll ich dich täglich erinnern?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und wann soll ich dich jeden Tag erinnern?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Und wann soll ich dich täglich erinnern?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.264191646452.1367086402750",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Für welches Datum möchtest du eine Abfrage machen?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1309295152452",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Ich trage das Ereignis {content} am {date}  um {time} ein. Passt das so?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1337523410017",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Ich richte die neue tägliche Erinnerung um {time} ein. Passt das so?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.795307106705",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Ich lösche das Ereignis {content} am {date} um {time} .  Passt das so?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.665755797437.746252704500",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Welches Ereignis soll ich löschen?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.665755797437.492325957784",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Wann ist das Ereignis {content} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "An welchem Datum ist das Ereignis {content} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.665755797437.473255591428",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Um wie viel Uhr ist das Ereignis?"
+                    }
+                ]
+            }
+        ]
+    }
+}

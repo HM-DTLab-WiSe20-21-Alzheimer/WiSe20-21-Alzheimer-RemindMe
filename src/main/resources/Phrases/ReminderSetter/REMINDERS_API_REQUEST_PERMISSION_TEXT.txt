@@ -1,0 +1,5 @@
+<speak>
+    Um
+    <lang xml:lang="en-US">Remind-Me</lang>
+     nutzen zu können braucht es die Erlaubnis Erinnerungen zu erstellen. Bitte erteilen Sie erst über die Alexa App die Erlaubnis und rufen sie den Skill erneut auf.
+</speak>

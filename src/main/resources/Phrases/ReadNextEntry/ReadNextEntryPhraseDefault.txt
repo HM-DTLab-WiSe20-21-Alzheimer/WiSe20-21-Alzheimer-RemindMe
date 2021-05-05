@@ -1,0 +1,9 @@
+Das nächste Ereigniss ist ${content} und findet am
+<say-as interpret-as="date">
+    ${date}
+</say-as>
+um
+<say-as interpret-as="time">
+    ${time}
+</say-as>
+statt.

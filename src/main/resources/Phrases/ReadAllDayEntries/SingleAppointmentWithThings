@@ -1,0 +1,1 @@
+Um <say-as interpret-as="time">${time}</say-as> hast du das Ereignis ${content}, du wolltest ${thingsToBring} mitnehmen.

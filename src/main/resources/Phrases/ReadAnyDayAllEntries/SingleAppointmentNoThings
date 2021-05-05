@@ -1,0 +1,1 @@
+Um <say-as interpret-as="time">${time}</say-as> ist das Ereignis ${content} vorhanden.

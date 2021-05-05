@@ -1,0 +1,5 @@
+<speak>
+    Hey, ich würde dir gerne erzählen, was heut so alles ansteht. Wenn du das hören willst, sag einfach Alexa An was muss ich heut noch denken mit
+    <lang xml:lang="en-US">Remind-Me</lang>
+    .
+</speak>

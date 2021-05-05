@@ -1,0 +1,5 @@
+<speak>
+    Hey, ich würde dir gerne dein nächstes Ereignis mitteilen. Wenn du das hören willst, sag einfach Alexa Woran willst du mich erinnern mit
+    <lang xml:lang="en-US">Remind-Me</lang>
+    . Ich werde dich aber auch später nochmal daran Erinnern.
+</speak>

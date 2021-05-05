@@ -1,0 +1,60 @@
+image: gradle:jdk11
+
+variables:
+  GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+
+before_script:
+  - export GRADLE_USER_HOME=`pwd`/.gradle
+
+stages:
+  - compile
+  - evaluation
+  - deploy
+
+cache: &cache
+  paths:
+    - build
+    - .gradle
+
+Build:
+  stage: compile
+  script: gradle --build-cache jar
+  tags:
+    - ebke specific
+  artifacts:
+    paths:
+      - build
+
+Test:
+  stage: evaluation
+  script:
+    - gradle check
+  artifacts:
+    when: always
+    reports:
+      junit: build/test-results/test/**/TEST-*.xml
+    paths:
+      - build
+
+Sonarqube:
+  only:
+    - master
+  stage: deploy
+  variables:
+    SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"  # Defines the location of the analysis task cache
+    GIT_DEPTH: "0"  # Tells git to fetch all the branches of the project, required by the analysis task
+  cache:
+    <<: *cache
+    paths:
+      - .sonar/cache
+  script: gradle sonarqube -Dsonar.qualitygate.wait=true -Dsonar.coverage.jacoco.xmlReportPaths=build/reports/jacoco/test/jacocoTestReport.xml
+  allow_failure: true
+
+Deploy:
+  only:
+    - master
+  stage: deploy
+  image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
+  script:
+    - aws sts get-caller-identity
+    - aws lambda update-function-code --function-name remindme --publish --zip-file fileb://./build/libs/remindme-0.1.jar

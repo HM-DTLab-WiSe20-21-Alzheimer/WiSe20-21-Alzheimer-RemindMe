@@ -1,0 +1,1 @@
+Du kannst an diesem Tag zu dieser Uhrzeit kein Ereignis eintragen, da zu der Zeit bereits ein Ereignis eingetragen ist. Das Ereignis lautet ${existingAppointmentName}.

@@ -1,0 +1,1 @@
+This is a phrase with no placeholders.
